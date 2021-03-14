@@ -5,7 +5,7 @@ A script for health report
 
 Please run get_cookies.py to get your cookies, and copy the cookies to gzhu_report.py.
 
-You may download some package
+You may need to download some package: 
 ```
 pip install playwright
 ```
