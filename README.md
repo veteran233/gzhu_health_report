@@ -7,5 +7,5 @@ Please run get_cookies.py to get your cookies, and copy the cookies to gzhu_repo
 
 You may need to download some package: 
 ```
-pip install playwright
+python -m playwright install
 ```
