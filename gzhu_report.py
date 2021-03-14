@@ -7,7 +7,7 @@ def run(playwright):
 
     context = browser.new_context()
 
-    page_cookies =  # Copy Here
+    page_cookies =  # Paste Here
 
     context.add_cookies(page_cookies)
 
