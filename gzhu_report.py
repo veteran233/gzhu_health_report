@@ -7,8 +7,8 @@ def getcode(path):
     result = tesserocr.image_to_text(image)
     return result
 
-usr = 1904200012
-passwd = 264857
+usr = # Your Username
+passwd = # Your Password
 
 def run(playwright):
     browser = playwright.chromium.launch(headless=False)
