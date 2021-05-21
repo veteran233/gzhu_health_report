@@ -7,8 +7,8 @@ def getcode(path):
     result = tesserocr.image_to_text(image)
     return result
 
-usr = # Your Username
-passwd = # Your Password
+usr = 1904200012
+passwd = 264857
 
 def run(playwright):
     browser = playwright.chromium.launch(headless=False)
@@ -20,6 +20,7 @@ def run(playwright):
 
     page.fill("input[name=\"username\"]", str(usr))
     page.fill("input[name=\"password\"]", str(passwd))
+    time.sleep(1)
 
     element_handle = page.query_selector("//*[@id=\"fm1\"]/div[3]/img")
     element_handle.screenshot(path="image.png")
