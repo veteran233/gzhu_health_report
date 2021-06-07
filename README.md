@@ -18,3 +18,9 @@ python -m playwright install
 三、在与gzhu_report.py同目录中新建文件user.txt，第一行输入账户，第二行输入密码，第三行输入核酸检测时间，格式为xxxx-xx-xx，例如2021-06-05
 
 四、运行
+
+第一步如果闲麻烦，可以用作者的（能自己注册最好就自己注册，因为作者可能会<del>跑路</del>）：
+
+API_KEY: CWVunPygFRV0Q6U5eeX1qEaT
+
+SECRET_KEY: SWSUHQlRy0smNQ6R0kpIDvwN9Cj7FVGv
