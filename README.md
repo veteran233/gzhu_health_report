@@ -8,7 +8,6 @@
 pip install playwright
 python -m playwright install
 ```
-
 使用方法：
 
 一、注册百度的OCR（免费白嫖的），具体方法百度，链接：https://ai.baidu.com/tech/ocr_others/numbers
@@ -19,8 +18,6 @@ python -m playwright install
 
 四、运行
 
-第一步如果闲麻烦，可以用作者的（能自己注册最好就自己注册，因为作者可能会<del>跑路</del>）：
-
-API_KEY: CWVunPygFRV0Q6U5eeX1qEaT
-
+第一步如果闲麻烦，可以用作者的（能自己注册最好就自己注册，因为作者可能会<del>跑路</del>）：\
+API_KEY: CWVunPygFRV0Q6U5eeX1qEaT\
 SECRET_KEY: SWSUHQlRy0smNQ6R0kpIDvwN9Cj7FVGv
