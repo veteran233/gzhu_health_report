@@ -10,6 +10,7 @@ python -m playwright install
 ```
 
 使用方法：
+
 1.注册百度的OCR（免费白嫖的），具体方法百度，链接：https://ai.baidu.com/tech/ocr_others/numbers
 
 2.复制API_KEY和SECRET_KEY到gzhu_report.py中
