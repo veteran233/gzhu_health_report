@@ -11,10 +11,10 @@ python -m playwright install
 
 使用方法：
 
-1.  注册百度的OCR（免费白嫖的），具体方法百度，链接：https://ai.baidu.com/tech/ocr_others/numbers
+一、注册百度的OCR（免费白嫖的），具体方法百度，链接：https://ai.baidu.com/tech/ocr_others/numbers
 
-2.  复制API_KEY和SECRET_KEY到gzhu_report.py中
+二、复制API_KEY和SECRET_KEY到gzhu_report.py中
 
-3.  在与gzhu_report.py同目录中新建文件user.txt，第一行输入账户，第二行输入密码，第三行输入核酸检测时间，格式为xxxx-xx-xx，例如2021-06-05
+三、在与gzhu_report.py同目录中新建文件user.txt，第一行输入账户，第二行输入密码，第三行输入核酸检测时间，格式为xxxx-xx-xx，例如2021-06-05
 
-4.  运行
+四、运行
