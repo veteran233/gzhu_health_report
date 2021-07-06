@@ -80,7 +80,7 @@ def run(playwright):
     
     page.fill("[placeholder=\"请输入验证码\"]", code)
 
-    page.click("text=登录")
+    page.click("input:has-text(\"登录\")")
     time.sleep(1)
 
     with page.expect_navigation():
