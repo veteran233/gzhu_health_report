@@ -9,8 +9,8 @@ from urllib.error import URLError
 from urllib.parse import urlencode
 from playwright.sync_api import sync_playwright
 
-API_KEY = # Your API_KEY
-SECRET_KEY = # Your SECRET_KEY
+API_KEY = 'CWVunPygFRV0Q6U5eeX1qEaT'
+SECRET_KEY = 'SWSUHQlRy0smNQ6R0kpIDvwN9Cj7FVGv'
 OCR_URL = "https://aip.baidubce.com/rest/2.0/ocr/v1/numbers"
 TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
 
@@ -62,7 +62,7 @@ def run(playwright):
     f = open('user.txt', 'r')
     usr = f.readline().rstrip('\n')
     passwd = f.readline().rstrip('\n')
-    date = f.readline().rstrip('\n')
+    # date = f.readline().rstrip('\n')
 
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
@@ -87,8 +87,9 @@ def run(playwright):
         page.click("text=开始上报")
 
     page.click("input[name=\"fieldJKMsfwlm\"]")
-    page.click("input[name=\"fieldYZNSFJCHS\"]")
-    page.fill("input[name=\"fieldJCSJ\"]", date)
+    # page.click(":nth-match(input[name=\"fieldYZNSFJCHS\"], 2)")
+    # page.click("input[name=\"fieldYZNSFJCHS\"]")
+    # page.fill("input[name=\"fieldJCSJ\"]", date)
     page.check("input[name=\"fieldCNS\"]")
 
     page.click("a:has-text(\"提交\")")
