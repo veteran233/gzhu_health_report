@@ -86,10 +86,12 @@ def run(playwright):
     with page.expect_navigation():
         page.click("text=开始上报")
 
-    page.click("input[name=\"fieldJKMsfwlm\"]")
-    # page.click(":nth-match(input[name=\"fieldYZNSFJCHS\"], 2)")
-    # page.click("input[name=\"fieldYZNSFJCHS\"]")
-    # page.fill("input[name=\"fieldJCSJ\"]", date)
+    page.click("input[name=\"fieldJKMsfwlm\"]") # 健康码是否为绿码
+    # page.click(":nth-match(input[name=\"fieldYZNSFJCHS\"], 2)") # 一周内是否检测核酸：否
+    # page.click("input[name=\"fieldYZNSFJCHS\"]") # 一周内是否检测核酸：是
+    # page.fill("input[name=\"fieldJCSJ\"]", date) # 检测时间
+    # page.click("imput[name=\"fieldSFJZYM\"]") # 是否接种疫苗
+    # page.click(":nth-match(input[name=\"fieldJZDZC\"], 2)") # 接种的针次
     page.check("input[name=\"fieldCNS\"]")
 
     page.click("a:has-text(\"提交\")")
