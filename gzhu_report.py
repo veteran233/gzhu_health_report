@@ -71,16 +71,19 @@ def run(playwright):
 
     page.goto("http://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start")
 
-    page.fill("input[name=\"username\"]", usr)
-    page.fill("input[name=\"password\"]", passwd)
+    # page.fill("input[name=\"username\"]", usr)
+    # page.fill("input[name=\"password\"]", passwd)
+    page.fill("[placeholder=\"请输入教工号或学号\"]", usr)
+    page.fill("[placeholder=\"输入密码\"]", passwd)
 
-    element_handle = page.query_selector("//*[@id=\"fm1\"]/div[3]/img")
-    element_handle.screenshot(path="image.png")
-    code = getcode()
+    # element_handle = page.query_selector("//*[@id=\"fm1\"]/div[3]/img")
+    # element_handle.screenshot(path="image.png")
+    # code = getcode()
     
-    page.fill("[placeholder=\"请输入验证码\"]", code)
+    # page.fill("[placeholder=\"请输入验证码\"]", code)
 
-    page.click("input:has-text(\"登录\")")
+    # page.click("input:has-text(\"登录\")")
+    page.click("#index_login_btn")
     time.sleep(1)
 
     with page.expect_navigation():
