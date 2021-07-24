@@ -8,11 +8,11 @@
 pip install playwright
 python -m playwright install
 ```
-使用方法：
+使用方法（一、二步暂时可以省略）：
 
-一、注册百度的OCR（免费白嫖的），具体方法百度，链接：https://ai.baidu.com/tech/ocr_others/numbers
+<del>一、注册百度的OCR（免费白嫖的），具体方法百度，链接：https://ai.baidu.com/tech/ocr_others/numbers</del>
 
-二、复制API_KEY和SECRET_KEY到gzhu_report.py中（注意要用字符串格式）
+<del>二、复制API_KEY和SECRET_KEY到gzhu_report.py中（注意要用字符串格式）</del>
 
 三、在与gzhu_report.py同目录中新建文件user.txt，第一行输入账户，第二行输入密码
 
