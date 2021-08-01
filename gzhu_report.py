@@ -64,27 +64,24 @@ def run(playwright):
     passwd = f.readline().rstrip('\n')
     # date = f.readline().rstrip('\n')
 
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(args=['--blink-settings=imagesEnabled=false'], headless=False, timeout=0)
     context = browser.new_context()
 
     page = context.new_page()
 
     page.goto("http://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start")
 
-    # page.fill("input[name=\"username\"]", usr)
-    # page.fill("input[name=\"password\"]", passwd)
     page.fill("[placeholder=\"请输入教工号或学号\"]", usr)
     page.fill("[placeholder=\"输入密码\"]", passwd)
 
     # element_handle = page.query_selector("//*[@id=\"fm1\"]/div[3]/img")
     # element_handle.screenshot(path="image.png")
     # code = getcode()
-    
+
     # page.fill("[placeholder=\"请输入验证码\"]", code)
 
-    # page.click("input:has-text(\"登录\")")
     page.click("#index_login_btn")
-    time.sleep(1)
+    # time.sleep(1)
 
     with page.expect_navigation():
         page.click("text=开始上报")
@@ -98,7 +95,7 @@ def run(playwright):
     page.check("input[name=\"fieldCNS\"]")
 
     page.click("a:has-text(\"提交\")")
-    time.sleep(1)
+    # time.sleep(1)
 
     with page.expect_navigation():
         page.click("text=确定")
