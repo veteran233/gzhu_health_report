@@ -8,7 +8,7 @@ def run(playwright):
     passwd = f.readline().rstrip('\n')
     # date = f.readline().rstrip('\n')
     browser = playwright.chromium.launch(
-        args=['--blink-settings=imagesEnabled=false'], headless=True, timeout=0)
+        args=['--blink-settings=imagesEnabled=false'], headless=False)
     context = browser.new_context()
     page = context.new_page()
     page.goto("http://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start")
@@ -21,7 +21,9 @@ def run(playwright):
     page.click("#index_login_btn")
     with page.expect_navigation():
         page.click("text=开始上报")
-    page.click("input[name=\"fieldJKMsfwlm\"]")  # 健康码是否为绿码
+    page.click("input[name=\"fieldYQJLsfjcqtblfz\"]") # 是否接触过半个月内有疫情重点地区旅居史的人员
+    page.click("input[name=\"fieldJKMsfwlm\"]") # 健康码是否为绿码
+    page.click("input[name=\"fieldCXXXsftjhbfz\"]") # 半个月内是否到过国内疫情重点地区
     # page.click(":nth-match(input[name=\"fieldYZNSFJCHS\"], 2)") # 一周内是否检测核酸：否
     # page.click("input[name=\"fieldYZNSFJCHS\"]") # 一周内是否检测核酸：是
     # page.fill("input[name=\"fieldJCSJ\"]", date) # 检测时间
