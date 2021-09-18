@@ -32,12 +32,16 @@ def run(playwright):
     browser.close()
 
 
-while True:
+cnt = 0
+while cnt < 30:
     try:
         with sync_playwright() as playwright:
             run(playwright)
     except:
-        True
+        cnt += 1
     else:
         break
-ToastNotifier().show_toast(msg="打卡完成", duration=-1, threaded=True)
+if cnt < 30:
+    ToastNotifier().show_toast(msg="打卡完成", duration=-1, threaded=True)
+else:
+    ToastNotifier().show_toast(msg="注意！打卡未成功！", duration=-1, threaded=True)
