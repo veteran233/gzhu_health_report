@@ -11,7 +11,7 @@ def run(playwright):
         args=['--blink-settings=imagesEnabled=false'], headless=False)
     context = browser.new_context()
     page = context.new_page()
-    page.goto("http://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start")
+    page.goto("https://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start")
     page.fill("[placeholder=\"请输入教工号或学号\"]", usr)
     page.fill("[placeholder=\"输入密码\"]", passwd)
     # element_handle = page.query_selector("//*[@id=\"fm1\"]/div[3]/img")
