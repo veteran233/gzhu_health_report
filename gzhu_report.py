@@ -24,6 +24,7 @@ def run(playwright):
     page.click("input[name=\"fieldYQJLsfjcqtbl\"]")  # 是否接触过半个月内有疫情重点地区旅居史的人员
     page.click("input[name=\"fieldJKMsfwlm\"]")  # 健康码是否为绿码
     page.click("input[name=\"fieldCXXXsftjhb\"]")  # 半个月内是否到过国内疫情重点地区
+    page.click("input[name=\"fieldJBXXdrsfwc\"]") # 当日是否外出
     page.check("input[name=\"fieldCNS\"]")
     page.click("a:has-text(\"提交\")")
     with page.expect_navigation():
