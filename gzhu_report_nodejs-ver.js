@@ -47,9 +47,9 @@ async function startReport() {
 
 (async () => {
     var cnt = 0
-    var ok = 1
     const retryTime = 5
     while (cnt < retryTime) {
+        var ok = 1
         try {
             await startReport()
         }
