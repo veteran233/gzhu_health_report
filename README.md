@@ -14,3 +14,8 @@ python -m playwright install
 一、在与gzhu_report.py同目录中新建文件user.txt，第一行输入账户，第二行输入密码
 
 二、运行
+
+2022/1/29 更新了node.js版本，需要第三方库
+```
+npm i puppeteer
+```
