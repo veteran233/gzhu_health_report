@@ -7,7 +7,7 @@ async function startReport() {
     browser = await puppeteer.launch({ headless: false, args: ['--blink-settings=imagesEnabled=false', '--disk-cache-dir=./Temp/browser-cache-disk'], executablePath: '/usr/bin/chromium-browser' })
     const page = await browser.newPage()
 
-    await page.goto('https://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start')
+    await page.goto('https://newcas.gzhu.edu.cn/cas/login?service=https%3A%2F%2Fyqtb.gzhu.edu.cn%2Finfoplus%2Flogin%3FretUrl%3Dhttps%253A%252F%252Fyqtb.gzhu.edu.cn%252Finfoplus%252Fform%252FXNYQSB%252Fstart')
 
     await page.waitForSelector('#un', { visible: true })
     await page.$eval('#un', el => el.value = '****')
