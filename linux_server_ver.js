@@ -21,6 +21,9 @@ async function startReport() {
     await page.waitForSelector('#preview_start_button', { visible: true })
     await page.click('#preview_start_button')
 
+    await page.waitForSelector('input[name=fieldSTQKbrstzk1]', { visible: true })
+    await page.click('input[name=fieldSTQKbrstzk1]')
+
     await page.waitForSelector('input[name=fieldYQJLsfjcqtbl]', { visible: true })
     await page.click('input[name=fieldYQJLsfjcqtbl]')
 

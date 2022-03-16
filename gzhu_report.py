@@ -21,6 +21,7 @@ def run(playwright):
     page.click("#index_login_btn")
     with page.expect_navigation():
         page.click("text=开始上报")
+    page.click("input[name=\"fieldSTQKbrstzk1\"]")  # 本人身体状况
     page.click("input[name=\"fieldYQJLsfjcqtbl\"]")  # 是否接触过半个月内有疫情重点地区旅居史的人员
     page.click("input[name=\"fieldJKMsfwlm\"]")  # 健康码是否为绿码
     page.click("input[name=\"fieldCXXXsftjhb\"]")  # 半个月内是否到过国内疫情重点地区
