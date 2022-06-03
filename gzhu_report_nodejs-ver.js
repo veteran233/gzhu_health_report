@@ -19,8 +19,40 @@ async function startReport() {
     await page.waitForSelector('#preview_start_button', { visible: true })
     await page.click('#preview_start_button')
 
-    await page.waitForSelector('input[name=fieldSTQKbrstzk1]', { visible: true })
-    await page.click('input[name=fieldSTQKbrstzk1]') // 本人身体状况
+    var str_selectbutton;
+
+    str_selectbutton = 'html > body > div:nth-child(4) > form > div > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > table > tbody > tr:nth-child(2) > td > div > table > tbody > tr:nth-child(10) > td:nth-child(1) > div > div > span > span:nth-child(1) > span > span:nth-child(2)'
+    await page.waitForSelector(str_selectbutton, { visible: true })
+    await page.click(str_selectbutton)
+    await page.waitForSelector('input[class=select2-search__field]', { visible: true })
+    await page.type('input[class=select2-search__field]', '广东省')
+    await page.waitForTimeout(3000)
+    await page.waitForSelector('#select2-V1_CTRL119-results > li', { visible: true })
+    await page.click('#select2-V1_CTRL119-results > li')
+
+    str_selectbutton = 'html > body > div:nth-child(4) > form > div > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > table > tbody > tr:nth-child(2) > td > div > table > tbody > tr:nth-child(10) > td:nth-child(2) > div > div > span > span:nth-child(1) > span > span:nth-child(2)'
+    await page.waitForSelector(str_selectbutton, { visible: true })
+    await page.click(str_selectbutton)
+    await page.waitForSelector('input[class=select2-search__field]', { visible: true })
+    await page.type('input[class=select2-search__field]', '广州市')
+    await page.waitForTimeout(3000)
+    await page.waitForSelector('#select2-V1_CTRL120-results > li', { visible: true })
+    await page.click('#select2-V1_CTRL120-results > li')
+
+    str_selectbutton = 'html > body > div:nth-child(4) > form > div > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > table > tbody > tr:nth-child(2) > td > div > table > tbody > tr:nth-child(10) > td:nth-child(3) > div > div > span > span:nth-child(1) > span > span:nth-child(2)'
+    await page.waitForSelector(str_selectbutton, { visible: true })
+    await page.click(str_selectbutton)
+    await page.waitForSelector('input[class=select2-search__field]', { visible: true })
+    await page.type('input[class=select2-search__field]', '番禺区')
+    await page.waitForTimeout(3000)
+    await page.waitForSelector('#select2-V1_CTRL121-results > li', { visible: true })
+    await page.click('#select2-V1_CTRL121-results > li')
+
+    await page.waitForSelector('input[name=fieldJBXXjgsjtdz]', { visible: true })
+    await page.$eval('input[name=fieldJBXXjgsjtdz]', el => el.value = '广州大学城外环西路230号广州大学')
+
+    // await page.waitForSelector('input[name=fieldSTQKbrstzk1]', { visible: true })
+    // await page.click('input[name=fieldSTQKbrstzk1]') // 本人身体状况
 
     await page.waitForSelector('input[name=fieldYQJLsfjcqtbl]', { visible: true })
     await page.click('input[name=fieldYQJLsfjcqtbl]') // 是否接触过半个月内有疫情重点地区旅居史的人员
