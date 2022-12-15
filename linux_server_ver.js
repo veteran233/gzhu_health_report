@@ -18,8 +18,8 @@ async function startReport() {
     await page.waitForSelector('#index_login_btn', { visible: true })
     await page.click('#index_login_btn')
 
-    await page.waitForSelector('#preview_start_button', { visible: true })
-    await page.click('#preview_start_button')
+    // await page.waitForSelector('#preview_start_button', { visible: true })
+    // await page.click('#preview_start_button')
 
     await page.waitForSelector('input[name=fieldSTQKbrstzk1]', { visible: true })
     await page.click('input[name=fieldSTQKbrstzk1]') // 本人身体状况
